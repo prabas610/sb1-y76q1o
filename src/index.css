@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #000000;
+  --bg-secondary: #111827;
+  --text-primary: #ffffff;
+  --text-secondary: #9CA3AF;
+  --accent-primary: #0EA5E9;
+  --accent-secondary: #0284C7;
+  --border-color: #374151;
+}
+
+[data-theme="light"] {
+  --bg-primary: #F3F4F6;
+  --bg-secondary: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --accent-primary: #0EA5E9;
+  --accent-secondary: #0284C7;
+  --border-color: #E5E7EB;
+}
+
+body {
+  @apply bg-black text-sky-100;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}
+
+/* Gradient text for sky blue theme */
+.gradient-text-sky {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-sky-600;
+}
+
+/* Neon border effect for sky blue theme */
+.neon-border-sky {
+  box-shadow: 0 0 5px #38bdf8, 0 0 10px #38bdf8, 0 0 15px #38bdf8;
+}
